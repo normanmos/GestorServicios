@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DD7DC12-6A56-4B6B-ACF6-C289220743D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoISOO_</RootNamespace>
+    <AssemblyName>ProyectoISOO_</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clases\Aplicaciones.cs" />
+    <Compile Include="clases\Conexion.cs" />
+    <Compile Include="clases\CONTROLADOR\conexion.cs" />
+    <Compile Include="clases\MODELO\agendar.cs" />
+    <Compile Include="clases\MODELO\departamento.cs" />
+    <Compile Include="clases\MODELO\estado.cs" />
+    <Compile Include="clases\MODELO\grupo.cs" />
+    <Compile Include="clases\MODELO\servicio.cs" />
+    <Compile Include="clases\MODELO\tipo_usuario.cs" />
+    <Compile Include="clases\MODELO\trabajo.cs" />
+    <Compile Include="clases\MODELO\usuario.cs" />
+    <Compile Include="clases\MODELO\usuario_agenda.cs" />
+    <Compile Include="clases\MODELO\ventana.cs" />
+    <Compile Include="clases\MODELO\zona.cs" />
+    <Compile Include="clases\Modulo_3.cs" />
+    <Compile Include="clases\Plataforma.cs" />
+    <Compile Include="clases\Servicio.cs" />
+    <Compile Include="clases\Servidor.cs" />
+    <Compile Include="clases\TipoPlataforma.cs" />
+    <Compile Include="clases\VISTA\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clases\VISTA\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases\VISTA\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clases\VISTA\Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases\VISTA\GestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clases\VISTA\GestionUsuarios.designer.cs">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases\VISTA\IngresoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clases\VISTA\IngresoUsuario.designer.cs">
+      <DependentUpon>IngresoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases\VISTA\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clases\VISTA\login.designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases\VISTA\seleccionmodulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clases\VISTA\seleccionmodulos.designer.cs">
+      <DependentUpon>seleccionmodulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaAplicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaAplicaciones.Designer.cs">
+      <DependentUpon>ConsultaAplicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaPlataformas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaPlataformas.Designer.cs">
+      <DependentUpon>ConsultaPlataformas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaServicios.Designer.cs">
+      <DependentUpon>ConsultaServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaServidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaServidores.Designer.cs">
+      <DependentUpon>ConsultaServidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaTiposPlataformas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\consultas_modulo_1\ConsultaTiposPlataformas.Designer.cs">
+      <DependentUpon>ConsultaTiposPlataformas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\GestionAplicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\GestionAplicaciones.Designer.cs">
+      <DependentUpon>GestionAplicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\GestionPlataformas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\GestionPlataformas.Designer.cs">
+      <DependentUpon>GestionPlataformas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\GestionServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\GestionServicios.Designer.cs">
+      <DependentUpon>GestionServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\GestionServidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\GestionServidores.Designer.cs">
+      <DependentUpon>GestionServidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\GestionTpoPlataforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\GestionTpoPlataforma.Designer.cs">
+      <DependentUpon>GestionTpoPlataforma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Modulo_3\ConsultarEscenario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Modulo_3\ConsultarEscenario.designer.cs">
+      <DependentUpon>ConsultarEscenario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Modulo_3\ConsultarTema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Modulo_3\ConsultarTema.designer.cs">
+      <DependentUpon>ConsultarTema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Modulo_3\ConsultaSolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Modulo_3\ConsultaSolucion.designer.cs">
+      <DependentUpon>ConsultaSolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Modulo_3\GestionEscenario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Modulo_3\GestionEscenario.designer.cs">
+      <DependentUpon>GestionEscenario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Modulo_3\GestionSolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Modulo_3\GestionSolucion.designer.cs">
+      <DependentUpon>GestionSolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Modulo_3\GestionTemas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Modulo_3\GestionTemas.designer.cs">
+      <DependentUpon>GestionTemas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportes\DataSetServicio1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetServicio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\ReporteServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\ReporteServicio.designer.cs">
+      <DependentUpon>ReporteServicio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="clases\VISTA\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clases\VISTA\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clases\VISTA\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clases\VISTA\IngresoUsuario.resx">
+      <DependentUpon>IngresoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clases\VISTA\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clases\VISTA\seleccionmodulos.resx">
+      <DependentUpon>seleccionmodulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\consultas_modulo_1\ConsultaAplicaciones.resx">
+      <DependentUpon>ConsultaAplicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\consultas_modulo_1\ConsultaPlataformas.resx">
+      <DependentUpon>ConsultaPlataformas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\consultas_modulo_1\ConsultaServicios.resx">
+      <DependentUpon>ConsultaServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\consultas_modulo_1\ConsultaServidores.resx">
+      <DependentUpon>ConsultaServidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\consultas_modulo_1\ConsultaTiposPlataformas.resx">
+      <DependentUpon>ConsultaTiposPlataformas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\GestionAplicaciones.resx">
+      <DependentUpon>GestionAplicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\GestionPlataformas.resx">
+      <DependentUpon>GestionPlataformas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\GestionServicios.resx">
+      <DependentUpon>GestionServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\GestionServidores.resx">
+      <DependentUpon>GestionServidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\GestionTpoPlataforma.resx">
+      <DependentUpon>GestionTpoPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Modulo_3\ConsultarEscenario.resx">
+      <DependentUpon>ConsultarEscenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Modulo_3\ConsultarTema.resx">
+      <DependentUpon>ConsultarTema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Modulo_3\ConsultaSolucion.resx">
+      <DependentUpon>ConsultaSolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Modulo_3\GestionEscenario.resx">
+      <DependentUpon>GestionEscenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Modulo_3\GestionSolucion.resx">
+      <DependentUpon>GestionSolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Modulo_3\GestionTemas.resx">
+      <DependentUpon>GestionTemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportes\Report1.rdlc" />
+    <EmbeddedResource Include="reportes\Report2.rdlc" />
+    <EmbeddedResource Include="reportes\Report3.rdlc" />
+    <EmbeddedResource Include="reportes\ReporteServicio.resx">
+      <DependentUpon>ReporteServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\añadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="reportes\DataSetServicio.xsc">
+      <DependentUpon>DataSetServicio.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DataSetServicio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetServicio1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reportes\DataSetServicio.xss">
+      <DependentUpon>DataSetServicio.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refrescar_3.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
